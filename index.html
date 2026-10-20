@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#faf5ee" />
+  <meta name="description" content="Một lá thư dành cho người đặc biệt: chuyện của chúng mình, những lời chưa nói và một lời tỏ tình chân thành." />
+  <meta property="og:title" content="Có một điều mình muốn nói với cậu ♡" />
+  <meta property="og:description" content="Mình có một món quà nho nhỏ gửi cậu. Mở ra nhé!" />
+  <title>Gửi cậu, một điều thật lòng ♡</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="petals" class="petals" aria-hidden="true"></div>
+  <div class="top-note"><span class="sparkle">✦</span> Một chiếc website được làm bằng tất cả sự chân thành <span class="sparkle">✦</span></div>
+  <header class="site-header" id="top">
+    <a href="#home" class="brand" aria-label="Về đầu trang"><span class="brand-icon">♡</span> gửi cậu <span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="Điều hướng chính">
+      <a href="#story">Chuyện chúng mình</a>
+      <a href="#reasons">Điều mình thích</a>
+      <a href="#gallery">Ảnh kỷ niệm</a>
+      <a href="#letter">Lá thư</a>
+      <a href="#question">Lời hồi đáp</a>
+    </nav>
+    <div class="header-actions">
+      <button id="musicBtn" class="icon-btn" title="Bật / tắt giai điệu" aria-label="Bật nhạc" aria-pressed="false"><span id="musicIcon">♫</span></button>
+      <button id="mobileMenuBtn" class="icon-btn mobile-menu-btn" aria-controls="mobileNav" aria-expanded="false" aria-label="Mở menu">☰</button>
+    </div>
+  </header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Menu điện thoại" hidden>
+    <a href="#story">Chuyện chúng mình</a><a href="#reasons">Điều mình thích</a><a href="#gallery">Ảnh kỷ niệm</a><a href="#letter">Lá thư</a><a href="#question">Lời hồi đáp</a>
+  </nav>
+
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> CÓ MỘT LỜI THƯƠNG NHỎ XÍU</div>
+        <div class="hero-script">Dear <span data-bind="crushName">Cậu</span>, ♡</div>
+        <h1><span data-bind="heroTitle1">Thế giới có</span><br/><span data-bind="heroTitle2">hàng triệu người,</span><br/><em data-bind="heroTitle3">mình lại thương cậu.</em></h1>
+        <p class="hero-lead" data-bind="tagline">Mọi điều xinh đẹp đều có một câu chuyện. Và câu chuyện mình thích nhất, là câu chuyện có cậu.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#letter" id="goToLetter">Mở lá thư của mình <span>↗</span></a>
+          <a class="btn btn-soft" href="#story">Dạo một vòng nhé <span>↓</span></a>
+        </div>
+        <div class="hero-signoff"><span class="avatar-heart">♡</span><div>Một món quà nho nhỏ<br/><strong>gửi riêng đến <span data-bind="crushName">Cậu</span></strong></div></div>
+      </div>
+      <div class="hero-visual reveal delay-1">
+        <div class="hero-arch"><img class="hero-art" src="assets/bouquet.svg" alt="Minh họa bó hoa hồng và phong thư xinh xắn" /></div>
+        <div class="sticker sticker-left"><span class="sticker-star">✳</span><span>made with<br/><strong>love & courage</strong></span></div>
+        <div class="sticker sticker-right">only for you <span>♡</span></div>
+        <div class="hero-side-text">một chút rung động • một chút chân thành</div>
+      </div>
+      <a class="scroll-prompt" href="#intro"><span>CUỘN XUỐNG MỘT CHÚT</span><span class="scroll-line"></span></a>
+    </section>
+
+    <section id="intro" class="quote-band">
+      <div class="quote-decor">❝</div><p data-bind="quote">Giữa vô vàn lần gặp gỡ, thật may vì mình đã gặp được cậu.</p>
+      <div class="quote-sub">A LITTLE LETTER FROM MY HEART TO YOURS <span>✳</span></div>
+    </section>
+
+    <section id="story" class="story-section section-wrap section-space">
+      <div class="section-topline">01 / NHỮNG CHUYỆN NHỎ XINH</div>
+      <div class="section-heading-row"><div><p class="script-label">Little moments</p><h2>Mọi chuyện bắt đầu<br/>từ <em>một khoảnh khắc.</em></h2></div><p class="section-description">Có những ngày chẳng có gì đặc biệt. Cho đến khi có một người khiến ta muốn nhớ mãi.</p></div>
+      <div class="story-layout">
+        <div class="story-art-frame"><img src="assets/memory-window.svg" alt="Minh họa cửa sổ, tách trà và hoa ngày nắng" loading="lazy" /><div class="art-caption">our small beautiful memories ♡</div></div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="counter-section" id="countdownSection">
+      <div class="section-wrap counter-wrap">
+        <div class="counter-message"><div class="small-upper">EVERY MOMENT COUNTS ♡</div><h2>Thời gian có thể trôi,<br/><em>nhưng cảm xúc vẫn ở đây.</em></h2><p>Những con số rất nhỏ, nhưng lại gói ghém thật nhiều kỷ niệm.</p></div>
+        <div class="counter-panel"><div class="counter-tiny">KỂ TỪ NGÀY MÌNH GẶP CẬU</div><div class="counter-big"><span id="daysTogether">—</span><span class="counter-unit">ngày</span></div><div class="counter-hr"></div><div class="next-label">Đếm ngược đến ngày đặc biệt tiếp theo</div><div class="mini-timer"><div><strong id="countDays">00</strong><span>Ngày</span></div><div><strong id="countHours">00</strong><span>Giờ</span></div><div><strong id="countMinutes">00</strong><span>Phút</span></div><div><strong id="countSeconds">00</strong><span>Giây</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="reasons" class="section-wrap section-space reasons-section">
+      <div class="section-topline">02 / NHỮNG ĐIỀU MÌNH THÍCH</div><div class="section-heading-center"><p class="script-label">A dozen little reasons</p><h2>12 điều khiến mình<br/><em>thương cậu hơn một chút.</em></h2><p>Chạm vào mỗi tấm thẻ để khám phá một điều mình chưa từng nói.</p></div>
+      <div class="reason-grid" id="reasonGrid"></div><div class="reason-bottom"><span>✴</span> Và còn nhiều hơn 12 điều nữa… <span>✴</span></div>
+    </section>
+
+    <section id="gallery" class="gallery-section section-space">
+      <div class="section-wrap"><div class="section-topline">03 / MỘT CUỐN ALBUM NHỎ</div><div class="section-heading-row"><div><p class="script-label">Photo diary</p><h2>Những khoảnh khắc<br/><em>muốn cất giữ thật lâu.</em></h2></div><p class="section-description">Mỗi bức ảnh là một mảnh kỷ niệm. Chạm vào từng tấm ảnh để xem rõ hơn.</p></div>
+      <div id="photoGrid" class="photo-grid"></div></div>
+    </section>
+
+    <section class="little-things-section section-space"><div class="section-wrap two-treasures"><div class="treasure-card secret-card"><div class="mini-label">04 / MỘT ĐIỀU BÍ MẬT</div><h3>Cậu biết không, <em>mình có một bí mật…</em></h3><p>Hãy cào lớp phủ bên dưới để đọc lời mình chưa từng nói.</p><div class="scratch-container" id="scratchContainer"><div class="scratch-message" data-bind="secret">Cậu không phải lựa chọn ngẫu nhiên. Cậu là điều dịu dàng mà trái tim mình luôn muốn hướng về.</div><canvas id="scratchCanvas" aria-label="Cào lớp màu để xem lời nhắn"></canvas></div><button class="text-action" id="revealSecret">Không cào được? Bấm để mở bí mật ↗</button></div>
+      <div class="treasure-card love-meter-card"><div class="mini-label">05 / CHỈ LÀ MỘT TRÒ VUI</div><h3>Cậu đoán trái tim mình<br/><em>rung động bao nhiêu?</em></h3><p>Thử kéo thanh bên dưới để xem điều bất ngờ nhé!</p><div class="meter-heart" aria-hidden="true">♥</div><div class="meter-readout"><strong id="lovePercent">88%</strong><span id="meterText">Nhiều hơn một chút mỗi ngày ♡</span></div><input id="loveRange" class="love-range" type="range" min="0" max="100" value="88" aria-label="Độ rung động" /><div class="range-labels"><span>Một xíu</span><span>Rất nhiều</span></div></div></div></section>
+
+    <section id="letter" class="letter-section section-space"><div class="section-wrap letter-layout"><div class="letter-intro"><div class="section-topline">06 / NHỮNG LỜI CHƯA NÓI</div><p class="script-label">A letter just for you</p><h2>Mình có<br/>một lá thư<br/><em>dành riêng cho cậu.</em></h2><p data-bind="heroLine">Có một điều rất nhỏ, nhưng mình đã cất giữ thật lâu…</p><div class="letter-bits">✷ viết bằng tất cả sự chân thành<br/>✷ không cần cậu phải vội trả lời<br/>✷ chỉ muốn cậu biết một điều</div></div><div class="letter-stage"><div class="envelope-decoration">with love <span>↙</span></div><button class="envelope-button" id="openLetterBtn" aria-label="Mở phong thư để đọc lời tỏ tình"><span class="env-back"></span><span class="env-paper"><span class="paper-small">dear you,</span><span class="paper-heart">♡</span></span><span class="env-front"></span><span class="env-flap"></span><span class="seal">♡</span></button><div class="envelope-caption" id="letterPrompt">Chạm vào phong bì để mở lá thư ♡</div></div></div></section>
+
+    <section class="wish-section"><div class="section-wrap wish-wrap"><span class="wish-star">✺</span><p>"<span data-bind="invitation">Nếu một ngày đẹp trời, cậu cũng muốn thử nắm tay mình, chúng ta bắt đầu từ một buổi hẹn nhé?</span>"</p><div>ONE LITTLE WISH, FROM ME TO YOU</div></div></section>
+
+    <section id="question" class="question-section section-space section-wrap"><div class="section-topline">07 / ĐIỀU QUAN TRỌNG NHẤT</div><div class="question-body"><div class="tiny-hearts">♡ &nbsp; ♡ &nbsp; ♡</div><p class="script-label">So, here is my little question...</p><h2><span data-bind="crushName">Cậu</span> có muốn cùng mình<br/><em>viết tiếp câu chuyện này không?</em></h2><p>Mình chỉ muốn nói thật lòng, còn câu trả lời của cậu luôn đáng được trân trọng. Không có áp lực hay một câu trả lời “bắt buộc” nào cả.</p><div class="answer-options"><button class="btn btn-primary answer-btn" data-answer="yes">♡ Mình cũng muốn thử</button><button class="btn btn-outline answer-btn" data-answer="think">Cho mình thêm thời gian</button><button class="btn btn-light answer-btn" data-answer="friend">Mình muốn làm bạn thôi</button></div><div class="answer-preview" id="answerPreview" hidden></div></div></section>
+
+    <section class="date-section section-wrap"><div class="date-card"><div><div class="mini-label">08 / NẾU MÌNH CÓ MỘT BUỔI HẸN</div><h3>Một cuộc hẹn<br/><em>nhỏ xíu cũng thật vui.</em></h3><p>Lên kế hoạch cho một buổi gặp gỡ nhẹ nhàng, rồi lưu lời hẹn vào lịch của bạn.</p></div><div class="date-form"><label for="dateWhen">Ngày mình muốn hẹn</label><input id="dateWhen" type="date" /><label for="dateIdea">Cậu muốn làm gì?</label><select id="dateIdea"><option value="Đi uống cà phê và trò chuyện">Đi cà phê và trò chuyện ☕</option><option value="Đi dạo ngắm hoàng hôn">Đi dạo ngắm hoàng hôn 🌆</option><option value="Đi xem phim">Đi xem phim 🎞️</option><option value="Đi ăn một món ngon">Đi ăn một món ngon 🍰</option><option value="Gặp nhau ở một nơi đặc biệt">Một nơi thật đặc biệt ✨</option></select><button id="calendarBtn" class="btn btn-primary" type="button">Lưu lời hẹn vào lịch <span>↗</span></button></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="footer-top section-wrap"><div class="footer-mark">♡</div><p>Hết trang web rồi, nhưng cảm xúc<br/><em>có lẽ vẫn còn rất nhiều…</em></p><div class="footer-signature">Gửi bằng cả trái tim,<br/><strong data-bind="yourName">Một người thương cậu</strong></div></div><div class="footer-bottom section-wrap"><span>MADE WITH ♡ — MỘT LỜI THƯƠNG ĐƯỢC GỬI ĐI</span><div><button id="shareBtn" class="footer-link">↗ Chia sẻ trang này</button><a href="#top">Lên đầu trang ↑</a></div></div></footer>
+
+  <button id="backToTop" class="back-to-top" title="Lên đầu trang" aria-label="Cuộn lên đầu trang">↑</button>
+
+  <div class="modal-overlay" id="letterModal" hidden role="dialog" aria-modal="true" aria-labelledby="letterModalTitle"><div class="modal-card letter-modal-card"><button class="modal-close" data-close="letterModal" aria-label="Đóng">×</button><div class="letter-modal-top">A LITTLE LOVE LETTER <span>✷</span></div><div class="letter-paper"><div class="letter-flourish">♡</div><h2 id="letterModalTitle"></h2><div id="letterContent" class="letter-content"></div><div class="letter-sign">Thương mến,<br/><span id="letterSigner"></span></div></div><div class="modal-bottom-actions"><button class="btn btn-soft" id="copyLetterBtn">⧉ Sao chép lá thư</button><button class="btn btn-primary" data-close="letterModal">Mình đã đọc xong ♡</button></div></div></div>
+
+  <div class="modal-overlay" id="photoModal" hidden role="dialog" aria-modal="true" aria-labelledby="photoModalTitle"><div class="modal-card photo-modal-card"><button class="modal-close" data-close="photoModal" aria-label="Đóng">×</button><h3 id="photoModalTitle">Một khoảnh khắc đáng nhớ</h3><img id="photoModalImage" alt="Ảnh kỷ niệm" /><p id="photoCaption"></p></div></div>
+
+
+  <div class="modal-overlay" id="answerModal" hidden role="dialog" aria-modal="true" aria-labelledby="answerTitle"><div class="modal-card answer-modal-card"><button class="modal-close" data-close="answerModal" aria-label="Đóng">×</button><div class="answer-illustration" id="answerIcon">♡</div><p class="script-label">A lovely little reply</p><h2 id="answerTitle"></h2><p id="answerBody"></p><label class="answer-label" for="replyMessage">Bạn muốn nhắn thêm điều gì không? (không bắt buộc)</label><textarea id="replyMessage" rows="3" placeholder="Viết lời nhắn ở đây nhé…"></textarea><p class="privacy-note">Không có máy chủ thu thập câu trả lời. Muốn gửi câu trả lời đến chủ nhân website, hãy dùng nút email hoặc sao chép bên dưới.</p><div class="answer-actions"><button class="btn btn-primary" id="sendReplyBtn">✉ Gửi qua email</button><button class="btn btn-soft" id="copyReplyBtn">⧉ Sao chép câu trả lời</button></div><div id="emailWarning" class="email-warning" hidden>Người tạo trang chưa thêm email. Bạn có thể sao chép lời hồi đáp và gửi qua tin nhắn.</div></div></div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+</body>
+</html>
